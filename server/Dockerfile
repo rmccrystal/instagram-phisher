@@ -17,4 +17,4 @@ ENV LANG C.UTF-8
 
 EXPOSE 80
 
-RUN ["flask", "run"]
+CMD ["flask", "run"]
