@@ -16,4 +16,4 @@ ENV LANG C.UTF-8
 
 EXPOSE 80
 
-ENTRYPOINT ["flask", "app.py"]
+ENTRYPOINT ["flask", "run"]
