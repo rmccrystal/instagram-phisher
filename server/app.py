@@ -13,7 +13,7 @@ else:                       # If we're in production mode, only allow connection
 if environ['password']:
     PASSWORD = environ['password']
 else:
-    PASSWORD = 'pass420'
+    PASSWORD = 'password'
 
 
 @app.route('/login', methods=['POST'])
