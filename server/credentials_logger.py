@@ -19,8 +19,9 @@ def log_credentials(username: str, password: str, ip_addr: str=None, useragent: 
           'Username: \'{0}\'\n'
           'Password: \'{1}\'\n'
           'IP: \'{2}\'\n'
+          'Useragent: \'{3}\'\n'
           '-----------------------\n'
-          .format(username, password, ip_addr))
+          .format(username, password, ip_addr, useragent))
 
 
 def get_credentials() -> List[Credential]:
