@@ -7,18 +7,20 @@ class Credential:
     username: str
     password: str
     ip_addr: str
+    useragent: str
 
 
 credential_list = list()
 
 
-def log_credentials(username: str, password: str, ip_addr=None):
-    credential_list.append(Credential(username, password, ip_addr))
+def log_credentials(username: str, password: str, ip_addr: str=None, useragent: str=None):
+    credential_list.append(Credential(username, password, ip_addr, useragent))
     print('\n----------HIT----------\n'
           'Username: \'{0}\'\n'
           'Password: \'{1}\'\n'
+          'IP: \'{2}\'\n'
           '-----------------------\n'
-          .format(username, password))
+          .format(username, password, ip_addr))
 
 
 def get_credentials() -> List[Credential]:
