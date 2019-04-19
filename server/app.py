@@ -33,7 +33,7 @@ def login_page(p: str=None):
 
 
 @app.route('/credentials/' + PASSWORD)
-def credentials(password: str):
+def credentials():
     return render_template('credentials.html', credentials_list=get_credentials())
 
 
