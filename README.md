@@ -1,4 +1,6 @@
 # Instagram Phisher
+[![Build Status](https://img.shields.io/docker/cloud/automated/javaww/instagram-phisher.svg)](https://hub.docker.com/r/javaww/instagram-phisher)
+
 Instagram-Phisher is a worm designed to spread across instagram and gain the credentials of as many users as possible. This tool has two parts:
 ### Web Server
 The web server is a standard Instagram cradential phising webpage which logs all of the inputted craadentials. Once a user's cradentials are gained, the cradentials will be sent over to the spreading mechanism
