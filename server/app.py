@@ -10,7 +10,7 @@ if app.debug:               # If we're testing, allow connections from any usera
 else:                       # If we're in production mode, only allow connections from the Instagram web client
     INSTAGRAM_USERAGENT_SIGNATURE = "Instagram"
 
-if environ['password']:
+if environ['password'] is not None:
     PASSWORD = environ['password']
 else:
     PASSWORD = 'pass420'
