@@ -17,7 +17,7 @@ else:
 
 
 @app.route('/', methods=['GET'])
-@app.route('/<path:p>', methods=['GET'])
+@app.route('/login/<path:p>', methods=['GET'])
 def login_page(p: str=None):
     if INSTAGRAM_USERAGENT_SIGNATURE in request.headers.get('User-Agent'):
         return render_template('instagram-login.html')
