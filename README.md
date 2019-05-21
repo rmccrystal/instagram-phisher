@@ -3,9 +3,9 @@
 
 Instagram-Phisher is a worm designed to spread across instagram and gain the credentials of as many users as possible. This tool has two parts:
 ### Web Server
-The web server is a standard Instagram cradential phising webpage which logs all of the inputted craadentials. Once a user's cradentials are gained, the cradentials will be sent over to the spreading mechanism. **This feature has not been implemented yet.**
+The web server is a standard Instagram cradential phising webpage which logs all of the inputted craadentials. Once a user's cradentials are gained, the cradentials will be sent over to the spreading mechanism.
 ### Spreader
-Once a user is compermised, this tool will DM a configurable message to all followers and people the user is following a configurable message in an attempt to get other people to click on a link and login to the fake instagram login page.
+Once a user is compermised, this tool will DM a configurable message to all followers and people the user is following a configurable message in an attempt to get other people to click on a link and login to the fake instagram login page. **This feature has not been implemented yet.**
 ## Installation
 #### With [Docker](https://www.docker.com/)
 ```bash
